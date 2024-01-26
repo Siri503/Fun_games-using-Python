@@ -1,4 +1,7 @@
 import random
+import os
+def clear_screen():
+    os.system('cls' if os.name=='nt' else 'clear')
 stages = [
     '''
      +---+
@@ -86,6 +89,7 @@ for i in range(len(cho)):
 while '_' in li and k>0:
     guess=input("enter the letter:")
     # print(list)s
+    clear_screen()
     for i in range(len(cho)):
         if guess==cho[i]:
             li[i]=guess
